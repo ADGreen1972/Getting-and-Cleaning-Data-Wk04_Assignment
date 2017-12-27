@@ -56,7 +56,7 @@ Comb_Data$Subject <- as.factor(Comb_Data$Subject)
 # Use the Act_Labels data to convert Activity column to factors
 Comb_Data$Activity <- factor(Comb_Data$Activity, levels = Act_Labels[,1], labels = Act_Labels[,2])
 
-# Use the melt function to create one row for each Subject/Activity/{all of Features_Relevant.names} 
+# Use the melt function to create one row for all data points across each Subject/Activity/Metric
 # This essentially multiplies data set by a factor of length(Features_Relevant)!
 Comb_Data.Melted <- melt(Comb_Data, id = c("Subject", "Activity"))
 
