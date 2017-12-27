@@ -22,7 +22,8 @@ The code performs the following steps:
 12) Add in the labels to Comb_Data - utilise the character vector built at end of 5) above
 13) Convert both the Subject and Activity variables to factors - the latter uses the activity labels
 14) Use the melt function to granulise the data - each row is now uniquely identified by a) Subject, b) Activity and c) Metric (e.g. TBodyAccMeanX()), d) value
-15) 
+15) The dcast function is then applied to summarise the data. The mean function is applied across each combination of a) Subject, b) Activity and across each metric
+16) The final data set, created in 15) above, is then exported into Tidy_Data.txt
 
 # Input Data Sets
 
